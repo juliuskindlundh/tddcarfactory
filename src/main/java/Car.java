@@ -4,10 +4,10 @@ public class Car {
     private String brand;
     private String regNumber;
 
-    public Car(String colour,String factoryBrand,String engine) {
+    public Car(String colour,String factoryBrand,String engine,String regNumber) {
         this.colour = colour;
         this.brand = factoryBrand;
-        this.regNumber = "ABC123";
+        this.regNumber = regNumber;
         this.engine = engine;
     }
 

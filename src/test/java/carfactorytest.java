@@ -46,7 +46,8 @@ public class carfactorytest {
     void regNumber_generation_test(){
         Car car_1 = carFactory.create(colour);
         Car car_2 = carFactory.create(colour);
-
+        System.out.println(car_1.getRegNumber());
+        System.out.println(car_2.getRegNumber());
         Assertions.assertNotEquals(car_1.getRegNumber(),car_2.getRegNumber());
     }
 }
