@@ -9,6 +9,7 @@ public class carfactorytest {
     String colour = "blue";
     String brand_1 = "volvo";
     String brand_2 = "BMW";
+    String engine = "engine_1";
 
     @BeforeEach
     void setUp(){
@@ -32,5 +33,13 @@ public class carfactorytest {
         Car car = carFactory.create(colour);
 
         Assertions.assertEquals(brand_2,car.getCarBrand());
+    }
+
+    @Test
+    void created_car_hasEngine_test(){
+        carFactory = new CarFactory(brand_1,engine);
+        Car car = carFactory.create(colour);
+
+        Assertions.assertEquals(carFactory.getEngine(),car.getEngine());
     }
 }
