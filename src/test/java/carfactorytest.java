@@ -27,4 +27,11 @@ public class carfactorytest {
 
         Assertions.assertNotNull(car.getCarBrand());
     }
+
+    @Test
+    void test3(){
+        Car car = carFactory.create(colour);
+
+        Assertions.assertNotNull(car.getRegNumber());
+    }
 }
