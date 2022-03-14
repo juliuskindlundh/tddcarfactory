@@ -13,7 +13,7 @@ public class carfactorytest {
 
     @BeforeEach
     void setUp(){
-        carFactory = new CarFactory(brand_1);
+        carFactory = new CarFactory(brand_1,engine);
     }
 
     @Test
@@ -28,7 +28,7 @@ public class carfactorytest {
 
     @Test
     void create_factory_with_brand_test(){
-        carFactory = new CarFactory(brand_2);
+        carFactory = new CarFactory(brand_2,engine);
 
         Car car = carFactory.create(colour);
 
@@ -37,7 +37,6 @@ public class carfactorytest {
 
     @Test
     void created_car_hasEngine_test(){
-        carFactory = new CarFactory(brand_1,engine);
         Car car = carFactory.create(colour);
 
         Assertions.assertEquals(carFactory.getEngine(),car.getEngine());
