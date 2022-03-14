@@ -41,4 +41,12 @@ public class carfactorytest {
 
         Assertions.assertEquals(carFactory.getEngine(),car.getEngine());
     }
+
+    @Test
+    void regNumber_generation_test(){
+        Car car_1 = carFactory.create(colour);
+        Car car_2 = carFactory.create(colour);
+
+        Assertions.assertNotEquals(car_1.getRegNumber(),car_2.getRegNumber());
+    }
 }
