@@ -15,7 +15,7 @@ public class carfactorytest {
 
     @Test
     void test(){
-        Car car = carFactory.create();
+        Car car = carFactory.create(colour);
 
         Assertions.assertNotNull(car);
         Assertions.assertEquals(colour,car.getColour());
