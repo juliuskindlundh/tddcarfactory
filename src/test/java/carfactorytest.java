@@ -14,24 +14,12 @@ public class carfactorytest {
     }
 
     @Test
-    void test1(){
+    void create_car_test(){
         Car car = carFactory.create(colour);
 
         Assertions.assertNotNull(car);
         Assertions.assertEquals(colour,car.getColour());
-    }
-
-    @Test
-    void test2(){
-        Car car = carFactory.create(colour);
-
         Assertions.assertNotNull(car.getCarBrand());
-    }
-
-    @Test
-    void test3(){
-        Car car = carFactory.create(colour);
-
         Assertions.assertNotNull(car.getRegNumber());
     }
 }
